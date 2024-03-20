@@ -1,0 +1,72 @@
+@import 'bulma/bulma';
+
+// Define your custom variables here
+// $primary: #646cff;
+// $primary-invert: findColorInvert($primary);
+// $radius-large: 8px;
+
+// :root {
+//   font-family: $family-sans-serif;
+//   line-height: 1.5;
+//   font-weight: $weight-normal;
+
+//   color-scheme: light dark;
+//   color: rgba($white, 0.87);
+//   background-color: $black-bis;
+
+//   font-synthesis: none;
+//   text-rendering: optimizeLegibility;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// a {
+//   font-weight: $weight-semibold;
+//   color: $primary;
+//   text-decoration: inherit;
+
+//   &:hover {
+//     color: darken($primary, 10%);
+//   }
+// }
+
+// body {
+//   margin: 0;
+//   display: flex;
+//   place-items: center;
+//   min-width: 320px;
+//   min-height: 100vh;
+// }
+
+// h1 {
+//   font-size: 3.2em;
+//   line-height: 1.1;
+// }
+
+// button {
+//   @include button($background: $black-bis);
+
+//   &:hover {
+//     border-color: $primary;
+//   }
+
+//   &:focus,
+//   &:focus-visible {
+//     outline: 4px auto -webkit-focus-ring-color;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: $grey-darker;
+//     background-color: $white-bis;
+//   }
+
+//   a:hover {
+//     color: lighten($primary, 10%);
+//   }
+
+//   button {
+//     background-color: $white-ter;
+//   }
+// }

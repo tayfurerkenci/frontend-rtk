@@ -9,7 +9,7 @@ const instance: AxiosInstance = axios.create({
 // // Add a request interceptor
 // instance.interceptors.request.use((config: AxiosRequestConfig) => {
 //   // Do something before request is sent
-//   // For example, add your auth token here
+//   // For examples, add your auth token here
 //   config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
 //   return config;
 // }, (error) => {

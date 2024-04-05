@@ -1,9 +1,8 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosError,isAxiosError } from 'axios';
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'https://your-api-url.com',
+  baseURL: 'http://localhost:8080',
   timeout: 10000,
-  headers: { 'X-Custom-Header': 'foobar' },
 });
 
 // // Add a request interceptor
@@ -26,4 +25,5 @@ const instance: AxiosInstance = axios.create({
 //   return Promise.reject(error);
 // });
 
+export {AxiosError, isAxiosError}; 
 export default instance;

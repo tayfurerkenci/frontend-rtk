@@ -1,4 +1,5 @@
-import { emptySplitApi as api } from './emptyApi';
+import api from './emptyApi';
+
 const injectedRtkApi = api.injectEndpoints({
   endpoints: (build) => ({
     createUser: build.mutation<CreateUserApiResponse, CreateUserApiArg>({

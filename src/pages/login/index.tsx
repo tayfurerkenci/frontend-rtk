@@ -1,13 +1,22 @@
 import { useState } from 'react';
 
-import Toast from '~/components/toast';
+// import Toast from '~/components/toast';
+import { useLoginUserMutation } from '~/store/simpleBankApi';
 
-const LoginForm: React.FC = () => {
+const LoginPage: React.FC = () => {
+  const [loginUser, { isLoading, isError }] = useLoginUserMutation();
+console.log('loginUser', loginUser, 'isLoading', isLoading, 'isError', isError)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+
+  // Dispatch login action
+  loginUser({ loginUserRequest: { username, password } });
   };
+
+
 
   return (
     <div className="login-page">
@@ -45,14 +54,13 @@ const LoginForm: React.FC = () => {
         </div>
 
         <div className="control">
-          <button type="button" className="button is-link">
+          <button type="submit" className="button is-link">
             Login
           </button>
         </div>
       </form>
-      <Toast type="success" message="You successfully logged in" />
     </div>
   );
 };
 
-export default LoginForm;
+export default LoginPage;

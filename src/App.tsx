@@ -1,17 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import routes from './routes';
-
 import 'bulma/css/bulma.css';
 
-const App: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        {routes.map((route) => (
-          <Route key={route.path} {...route} />
-        ))}
-      </Routes>
-    </Router>
+    <h1>sample header</h1>
   );
 };
 

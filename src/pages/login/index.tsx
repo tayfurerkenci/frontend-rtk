@@ -1,19 +1,19 @@
 import { useState } from 'react';
 
 // import Toast from '~/components/toast';
-import { useLoginUserMutation } from '~/store/simpleBankApi';
+import { useGetAccountsQuery, useLoginUserMutation } from '~/store/simpleBankApi';
 
 const LoginPage: React.FC = () => {
-  const [loginUser, { isLoading, isError }] = useLoginUserMutation();
-console.log('loginUser', loginUser, 'isLoading', isLoading, 'isError', isError)
+  const [loginUser] = useLoginUserMutation();
+  const { data: accounts } = useGetAccountsQuery({pageId: 1, pageSize: 10});
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-  // Dispatch login action
-  loginUser({ loginUserRequest: { username, password } });
+    // Dispatch login action
+    loginUser({ loginUserRequest: { username, password } });
   };
 
 
@@ -59,6 +59,11 @@ console.log('loginUser', loginUser, 'isLoading', isLoading, 'isError', isError)
           </button>
         </div>
       </form>
+      <div className='accounts'>
+        {accounts?.map((account) => (
+          <div key={account.id}>asd</div>
+        ))}
+      </div>
     </div>
   );
 };
